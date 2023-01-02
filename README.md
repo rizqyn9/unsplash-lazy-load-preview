@@ -35,3 +35,10 @@ yarn start
 ```
 
 <br/>
+
+### Tools
+
+- [React Query](https://tanstack.com/query/v4)
+- [Tailwindcss](https://tailwindcss.com/)
+- [Jotai](https://jotai.org/)
+- [Typescript](https://www.typescriptlang.org/)

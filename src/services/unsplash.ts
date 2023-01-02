@@ -16,7 +16,7 @@ type QueryUnsplash = {
 
 const getUnsplashImage = async (query: QueryUnsplash) => {
   const params = {
-    query: query.search || "data",
+    query: query.search || "programmer",
     page: query.page,
     per_page: 5,
   };

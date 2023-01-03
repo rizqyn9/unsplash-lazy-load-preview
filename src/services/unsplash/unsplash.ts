@@ -1,6 +1,6 @@
 import axios from "axios";
-import { config } from "../constant";
-import { UnsplashResponse } from "../features/unsplash-grid-image/unsplash.types";
+import { config } from "../../constant";
+import { UnsplashResponse, UnsplashDetailsResponse } from "./unsplash.types";
 
 const unsplashApi = axios.create({
   baseURL: config.UNSPLASH_URL,
@@ -28,4 +28,12 @@ const getUnsplashImage = async (query: QueryUnsplash) => {
   return data;
 };
 
-export { getUnsplashImage };
+const getUnsplashDetails = async (photoId: string) => {
+  const { data } = await unsplashApi.get<UnsplashDetailsResponse>(
+    "/photos/" + photoId
+  );
+
+  return data;
+};
+
+export { getUnsplashImage, getUnsplashDetails };

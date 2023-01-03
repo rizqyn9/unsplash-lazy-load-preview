@@ -18,7 +18,9 @@ export function UnsplashGridImage() {
       <div className="flex flex-col gap-5 p-5 min-h-screen py-11">
         {isLoading && <p>Loading...</p>}
         {images &&
-          images.map((x, idx) => <UnsplashImage key={idx} imgUrl={x.url} />)}
+          images.map((photo, idx) => (
+            <UnsplashImage key={idx} imgUrl={photo.url} photoId={photo.id} />
+          ))}
       </div>
       <div className="py-12 text-center">
         {/* @ts-expect-errors */}

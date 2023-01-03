@@ -1,6 +1,6 @@
 import { atom, useAtom } from "jotai";
 import { useQuery } from "react-query";
-import { getUnsplashImage } from "../../services/unsplash";
+import { getUnsplashImage } from "../../services/unsplash/unsplash";
 
 type AtomUnsplash = {
   images: { id: string; url: string }[];
